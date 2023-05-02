@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background:#000;
+}
+h2{
+    position: relative;
+    margin: 20px 0;
+    top: 30px;
+    
+    left: -20px;
+    font-size: 1em;
+    font-weight: 900;
+    color: #fff;
+    z-index: hidden;
+   -webkit-text-stroke: .3 blue;
+}
+h2::before{
+    content: '';
+    position: absolute;
+    left: 120;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(90deg,transparent 0%,#000 5%,#000);
+    animation:  animate 5.5s linear forwards;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%{
+        left: 120%
+    }
+    100%{
+        left: -20%
+    }
+}
+video{
+    position:absolute;
+    top:0;
+    left:200;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+h2 span{
+    color: #ff022c;
+}
